@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager | Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .profile-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: 700;
+    }
+    .profile-details {
+      margin-bottom: 2rem;
+    }
+    .profile-details h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .profile-details p {
+      color: var(--text-secondary);
+    }
+    .danger-zone {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .danger-zone p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-panel">
+    <h2>TaskManager</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="../tasks/index.html">Tasks</a></li>
+        <li><a href="../add-task/index.html">Add Task</a></li>
+        <li><a href="index.html" class="active">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate-fade-in">
+    <div class="profile-container glass-panel">
+      <div class="avatar">ST</div>
+      
+      <div class="profile-details">
+        <h3 id="profileName">Student Name</h3>
+        <p>student@example.com</p>
+      </div>
+
+      <div class="danger-zone">
+        <h3 style="color: var(--danger); margin-bottom: 0.5rem;">Danger Zone</h3>
+        <p>Clear all your task data. This action cannot be undone.</p>
+        <button class="btn btn-danger" onclick="clearData()">Clear All Data</button>
+      </div>
+    </div>
+  </main>
+  <script src="profile.js"></script>
+</body>
+</html>

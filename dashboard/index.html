@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      padding: 2rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to bottom, #fff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .recent-tasks {
+      padding: 2rem;
+    }
+    .recent-tasks h3 {
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+    }
+    .mini-task-list {
+      list-style: none;
+    }
+    .mini-task-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .mini-task-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-panel">
+    <h2>TaskManager</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" class="active">Dashboard</a></li>
+        <li><a href="../tasks/index.html">Tasks</a></li>
+        <li><a href="../add-task/index.html">Add Task</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate-fade-in">
+    <div class="stats-grid">
+      <div class="stat-card glass-panel">
+        <div class="stat-number" id="totalTasks">0</div>
+        <div class="stat-label">Total Tasks</div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-number" id="completedTasks" style="background: linear-gradient(to bottom, #34d399, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">0</div>
+        <div class="stat-label">Completed</div>
+      </div>
+      <div class="stat-card glass-panel">
+        <div class="stat-number" id="pendingTasks" style="background: linear-gradient(to bottom, #fbbf24, #d97706); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">0</div>
+        <div class="stat-label">Pending</div>
+      </div>
+    </div>
+
+    <div class="recent-tasks glass-panel">
+      <h3>Upcoming Deadlines</h3>
+      <ul class="mini-task-list" id="upcomingList">
+        <!-- JS will populate this -->
+      </ul>
+    </div>
+  </main>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager | Tasks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .task-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .task-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .task-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+    .task-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .task-item.completed {
+      opacity: 0.6;
+    }
+    .task-item.completed h3 {
+      text-decoration: line-through;
+    }
+    .task-info h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .task-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .badge {
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-High { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+    .badge-Medium { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+    .badge-Low { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+    
+    .task-actions {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .btn-sm {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+    }
+    #noTasks {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-secondary);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-panel">
+    <h2>TaskManager</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../dashboard/index.html">Dashboard</a></li>
+        <li><a href="index.html" class="active">Tasks</a></li>
+        <li><a href="../add-task/index.html">Add Task</a></li>
+        <li><a href="../profile/index.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate-fade-in">
+    <div class="task-controls">
+      <h2>Your Tasks</h2>
+      <button class="btn" onclick="window.location.href='../add-task/index.html'">+ Add Task</button>
+    </div>
+
+    <div class="glass-panel" style="padding: 1rem;">
+      <div id="noTasks">No tasks found. Create one to get started!</div>
+      <div class="task-grid" id="taskList">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </main>
+  <script src="tasks.js"></script>
+</body>
+</html>

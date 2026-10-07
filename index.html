@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Manager | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-secondary);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .card {
+      padding: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      border-color: rgba(129, 140, 248, 0.3);
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary-color);
+    }
+  </style>
+</head>
+<body>
+  <header class="glass-panel">
+    <h2>TaskManager</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="dashboard/index.html">Dashboard</a></li>
+        <li><a href="tasks/index.html">Tasks</a></li>
+        <li><a href="add-task/index.html">Add Task</a></li>
+        <li><a href="profile/index.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="animate-fade-in">
+    <div class="hero glass-panel">
+      <h1>Stay on top of your studies</h1>
+      <p>A unified workspace for students to manage assignments, exams, and projects efficiently without missing deadlines.</p>
+      <button class="btn" onclick="window.location.href='add-task/index.html'">Get Started</button>
+    </div>
+
+    <div class="grid">
+      <a href="dashboard/index.html" class="card glass-panel">
+        <h3>Dashboard</h3>
+        <p>View your progress and statistics.</p>
+      </a>
+      <a href="tasks/index.html" class="card glass-panel">
+        <h3>Task List</h3>
+        <p>Manage and organize all your assignments.</p>
+      </a>
+      <a href="add-task/index.html" class="card glass-panel">
+        <h3>Add New</h3>
+        <p>Quickly add a new task or project.</p>
+      </a>
+      <a href="profile/index.html" class="card glass-panel">
+        <h3>Profile</h3>
+        <p>Manage your account settings.</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
